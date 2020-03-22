@@ -1,0 +1,174 @@
+*, *:before, *:after {
+  -webkit-print-color-adjust: exact;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+}
+
+.generallink {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 3px solid #fff;
+  -moz-transition: all cubic-bezier(0.2, 1, 0.2, 1) 0.4s;
+  -webkit-transition: all cubic-bezier(0.2, 1, 0.2, 1) 0.4s;
+  transition: all cubic-bezier(0.2, 1, 0.2, 1) 0.4s;
+}
+
+.generallink:hover {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  -moz-transition: all cubic-bezier(0.2, 1, 0.2, 1) 0.4s;
+  -webkit-transition: all cubic-bezier(0.2, 1, 0.2, 1) 0.4s;
+  transition: all cubic-bezier(0.2, 1, 0.2, 1) 0.4s;
+}
+
+body {
+  color: white;
+  font-size: 1em;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: white;
+}
+
+#container {
+  width: 375px;
+  height: 600px;
+  margin: 50px auto;
+  position: relative;
+  background-color: white}
+
+  #top {
+    border: 0;
+    border-bottom-width: 4px;
+    -webkit-border-image: -webkit-gradient(linear, left top, right top, from(#ffcbcb), to(#92aef7));
+    -webkit-border-image: linear-gradient(to right, #ffcbcb, #92aef7);
+         -o-border-image: linear-gradient(to right, #ffcbcb, #92aef7);
+            border-image: -webkit-gradient(linear, left top, right top, from(#ffcbcb), to(#92aef7));
+            border-image: linear-gradient(to right, #ffcbcb, #92aef7);
+    border-image-slice: 1;
+    padding: 20px 10px 10px 10px;
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+  }
+  #top a.back {
+    position: absolute;
+    left: 15px;
+    bottom: calc(50% - .7em);
+    font-size: 1.8em;
+    line-height: 1em;
+    color: #92aef7;
+    text-decoration: none;
+  }
+  #top .chat-icon {
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    bottom: 5px;
+    position: absolute;
+    border-radius: 60px;
+    background-color: #dee8f4;
+    background-image: url("https://i.imgur.com/YFMRIyJ.png");
+    background-size: 150%;
+    background-position: left center;
+  }
+  #top h3 {
+    font-size: 1.1em;
+    margin-bottom: 2px;
+    color: rgb(65, 65, 65)
+  }
+  #top p {
+    font-size: 0.85em;
+    color: #888383;
+  }
+#messages {
+  padding: 10px;
+  height: 70vh;
+  overflow:auto;
+}
+
+
+.message {
+  width: 80%;
+}
+
+.avatar,
+.message {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.blob {
+  width: 100%;
+}
+
+.blob-content {
+  margin-bottom: 1.5px;
+  padding: 7px 12px 8px 12px;
+  display: inline-block;
+  position: relative;
+  border-radius: 1rem;
+}
+
+/*
+@media (max-width: 768px) {
+  .blob-content p{
+    font-size: 10em;
+  }
+}
+
+@media (min-width: 768px) {
+  .blob-content p{
+    
+  }
+}
+*/
+
+.receiver .blob-content,
+.sender .blob-content {
+  width: auto;
+  max-width: 90%;
+}
+
+.receiver .blob-content {
+  color: black;
+  background-color: hsl(216, 14%, 84%);
+}
+.receiver .blob-connector {
+  left: calc(30% - 20px);
+}
+.receiver .blob-connector:before, .receiver .blob-connector:after {
+  box-shadow: 0 0 0 16px hsl(216, 14%, 84%);
+}
+
+.sender {
+  text-align: right;
+}
+.sender .blob-content {
+  text-align: left;
+  color: white;
+  background-color: hsl(216, 67%, 72%)
+  ;
+}
+.sender .blob-connector {
+  right: calc(30% - 20px);
+}
+.sender .blob-connector:before, .sender .blob-connector:after {
+  box-shadow: 0 0 0 16px hsl(216, 67%, 72%)
+  ;
+}
+
+.input{
+  color: black;
+}
+
+.input h2{
+  margin-bottom: 20px;
+}
